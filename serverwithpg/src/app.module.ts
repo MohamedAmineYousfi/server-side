@@ -1,8 +1,9 @@
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import * as Joi from 'joi';
+require('dotenv').config();
 import { DatabaseModule } from './dataBase//database.module';
 import { UserModule } from './user/user.module';
 import { RestaurantsModule } from './restaurants/restaurants.module';
@@ -15,16 +16,15 @@ import { RecipesModule } from './recipes/recipes.module';
 import { AdminModule } from './admin/admin.module';
 
 @Module({
-  imports: [ConfigModule.forRoot({
-    envFilePath: '.env',
-    validationSchema: Joi.object({
-      POSTGRES_HOST: Joi.string().required(),
-      POSTGRES_PORT: Joi.number().required(),
-      POSTGRES_USER: Joi.string().required(),
-      POSTGRES_PASSWORD: Joi.string().required(),
-      POSTGRES_DB: Joi.string().required(),
-      PORT: Joi.number(),
-    }),
+  imports: [TypeOrmModule.forRoot({
+   "type":'postgres',
+    "host":process.env.POSTGRES_HOST,
+    "port":5432,
+    "username":process.env.POSTGRES_USER,
+    "password":process.env.POSTGRES_PASSWORD,
+    "database":process.env.POSTGRES_DB,
+    "entities": ["dist/**/*.entity{.ts,.js}"],
+    "synchronize": true,
   }), UserModule, RestaurantsModule, BlogsModule, EventsModule, CoachsModule, GymsModule, PostsModule, RecipesModule, AdminModule],
   controllers: [AppController],
   providers: [AppService],
