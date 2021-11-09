@@ -2,10 +2,10 @@
   "name": "server-side",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node serverwitpg/dist/main"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,10 @@
     "url": "https://github.com/MohamedAmineYousfi/server-side/issues"
   },
   "homepage": "https://github.com/MohamedAmineYousfi/server-side#readme",
-
   "engines": {
     "node": "14.17.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
