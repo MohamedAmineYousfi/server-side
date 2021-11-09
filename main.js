@@ -5,9 +5,7 @@ const app_module_1 = require("../server-side/serverwithpg/dist/app.module");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.enableCors();
-    await app.listen(process.env.PORT || 3000,()=>{
-        console.log("working")
-    });
+    await app.listen(process.env.PORT || 3000);
 }
 
 bootstrap();
