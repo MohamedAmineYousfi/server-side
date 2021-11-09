@@ -2,10 +2,11 @@
   "name": "server-side",
   "version": "1.0.0",
   "description": "",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "tsc --sourceMap false",
-    "start": "node serverwithpg/dist/main.js"
+    "postinstall": "npm run prestart:prod",
+    "start:prod": "node serverwithpg/dist/main.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "@nestjs/core": "^8.2.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   }
 }
