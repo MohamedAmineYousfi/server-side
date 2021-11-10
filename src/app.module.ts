@@ -3,7 +3,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-require('dotenv').config();
+import * as dotenv from 'dotenv';
 import { DatabaseModule } from './dataBase//database.module';
 import { UserModule } from './user/user.module';
 import { RestaurantsModule } from './restaurants/restaurants.module';
@@ -20,6 +20,11 @@ import { AdminModule } from './admin/admin.module';
     name:'default',
     type:'postgres',
     url: process.env.DATABASE_URL ,
+    username: process.env.POSTGRES_USERNAME ,
+    password: process.env.POSTGRES_PASSWORD ,
+    host: process.env.POSTGRES_HOST ,
+    port: 5432,
+    database: process.env.POSTGRES_DATABASE ,
     synchronize: true,
     logging:true,
     dropSchema:false,
