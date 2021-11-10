@@ -23,7 +23,9 @@ import { AdminModule } from './admin/admin.module';
     synchronize: true,
     logging:true,
     dropSchema:false,
-    entities: ["dist/**/*.entity{.ts,.js}"],
+    ssl: true,
+    entities: ["dist/**/*.entity{.ts,.js}"]
+   
   
   }), UserModule, RestaurantsModule, BlogsModule, EventsModule, CoachsModule, GymsModule, PostsModule, RecipesModule, AdminModule],
   controllers: [AppController],
