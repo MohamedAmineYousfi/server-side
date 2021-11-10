@@ -20,7 +20,7 @@ import { AdminModule } from './admin/admin.module';
     name:'default',
     type:'postgres',
     host:process.env.POSTGRES_HOST,
-    port:5432,
+    port:process.env.PORT,
     username:process.env.POSTGRES_USER,
     password:process.env.POSTGRES_PASSWORD,
     database:process.env.POSTGRES_DB,
