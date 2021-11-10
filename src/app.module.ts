@@ -28,7 +28,7 @@ import { AdminModule } from './admin/admin.module';
     synchronize: true,
     logging:true,
     dropSchema:false,
-    ssl: true,
+    ssl: { rejectUnauthorized: false },
     entities: ["dist/**/*.entity{.ts,.js}"]
    
   
