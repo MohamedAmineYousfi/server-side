@@ -19,6 +19,7 @@ import { AdminModule } from './admin/admin.module';
   imports: [TypeOrmModule.forRoot({
     name:'default',
     type:'postgres',
+    url: process.env.DATABASE_URL ,
     synchronize: true,
     logging:true,
     dropSchema:false,
