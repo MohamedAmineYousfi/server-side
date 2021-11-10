@@ -1,3 +1,6 @@
+#compiledoutput 
+/dist
+/node_modules
 # Logs
 logs
 *.log
@@ -69,7 +72,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+/env
 
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -81,8 +84,7 @@ typings/
 # Nuxt.js build / generate output
 .nuxt
 .dist
-/dist
-/node_modules
+
 
 # Gatsby files
 .cache/
