@@ -7,7 +7,7 @@ import {Coach} from '../../coachs/entities/coach.entity'
 @Entity()
 export class User {
     @PrimaryGeneratedColumn()
-    id: number;
+    public id: number;
 
     @Column()
     public first_name: string 
@@ -36,10 +36,10 @@ export class User {
     @OneToMany(() => Event, (event: Event) => event.creator)
     public events: Event[];
 
-    @OneToMany(() => Coach, (coach: Coach) => coach.members)
+    @OneToMany(() => Coach, (coach: Coach) => coach.adherent)
     public coachs: Coach[];
 
-    @Column()
+    @Column({nullable:true})
     public bmi: number
 
     @Column()
@@ -51,7 +51,7 @@ export class User {
     @Column()
     public age: number
 
-    @Column()
+    @Column({nullable:true})
     public imageUrl: string
 
 

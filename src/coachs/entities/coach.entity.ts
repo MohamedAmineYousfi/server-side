@@ -23,8 +23,8 @@ export class Coach {
     @Column()
     adress: string; 
 
-    @ManyToOne(() => User, (members: User) => members.coachs)
-    public members: User;
+    @ManyToOne(() => User, (adherent: User) => adherent.coachs)
+    public adherent: User;
   
     @Column()
     phoneNumber : Number; 
