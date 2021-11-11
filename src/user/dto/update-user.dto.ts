@@ -6,7 +6,7 @@ import {Coach} from '../../coachs/entities/coach.entity'
 
 export class UpdateUserDto extends PartialType(CreateUserDto) {
  
-    id: number;
+    id: number
 
     
     first_name: string 
@@ -24,9 +24,7 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
     likes: number
 
     
-    comments: string 
 
-    
     hashed_password: string 
     
     
@@ -37,10 +35,10 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
 
 
     
-    gyms: Gym[] 
+    members: Gym[] 
  
      
-    members: Coach[]
+    adherent: Coach[] 
 
    
     creator: Event[]

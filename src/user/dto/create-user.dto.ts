@@ -2,8 +2,7 @@ import {Gym} from '../../gyms/entities/gym.entity'
 import {Coach} from '../../coachs/entities/coach.entity'
 import {Event} from '../../events/entities/event.entity'
 export class CreateUserDto {
-    id: number
- 
+  
      first_name: string 
  
      
@@ -28,11 +27,10 @@ export class CreateUserDto {
      registred_at: Date 
  
  
+     adherent: Coach[] 
+
      
-     gyms: Gym[] 
- 
-     
-     members: Coach[]
+     members: Gym[]
 
     
      creator: Event[]

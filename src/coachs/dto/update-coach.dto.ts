@@ -1,5 +1,6 @@
 import { PartialType } from '@nestjs/mapped-types';
 import { CreateCoachDto } from './create-coach.dto';
+import {User} from '../../user/entities/user.entity'
 
 export class UpdateCoachDto extends PartialType(CreateCoachDto) {
     id: number;
@@ -8,7 +9,7 @@ export class UpdateCoachDto extends PartialType(CreateCoachDto) {
     price: number;
     description: string;
     adress: string; 
-    members : number; 
+    adherent : User[]; 
     phoneNumber : number; 
     email : string; 
     imageUrl : string;
