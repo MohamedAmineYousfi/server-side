@@ -17,7 +17,7 @@ export class Event {
     @Column()
     public adress: string;
 
-    @Column()
+    @Column({ type: 'varchar', length: 300 })
     public description: string;
   
     @Column()

@@ -4,5 +4,8 @@ export class CreateRecipeDto {
     content: string 
     likes: number
     imageUrl : string
+    Kcal : number 
+    fat : number 
+    carb : number
 }
 

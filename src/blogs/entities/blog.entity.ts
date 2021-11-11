@@ -6,7 +6,7 @@ export class Blog {
     public id: number;
 
     @Column()
-    public user_id: number
+    public user_name: number
 
     @Column()
     public blogTitle: string;
@@ -14,14 +14,14 @@ export class Blog {
     @Column()
     public imageUrl: string;
 
-    @Column()
+    @Column({ type: 'varchar', length: 300 })
     public content: string;
 
     @Column()
     public date: Date;
    
 
-    @Column()
+    @Column({ default :0 , nullable: true })
     public like: number;
 
 }

@@ -3,7 +3,7 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Recipe {
     @PrimaryGeneratedColumn()
-    public id: Number
+    public id: number
 
     @Column()
     public recipeTitle: string 
@@ -15,10 +15,19 @@ export class Recipe {
     public content: string 
 
     
-    @Column({default : 0})
-    public likes: Number
+    @Column({default : 0,nullable:true})
+    public likes: number
  
     @Column()
     public imageUrl: string 
+
+    @Column({default : 0,nullable:true})
+    public Kcal : number 
+    
+    @Column({default : 0,nullable:true})
+    public fat : number 
+
+    @Column({default : 0,nullable:true})
+    public carb : number
 
 }

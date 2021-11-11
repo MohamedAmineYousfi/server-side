@@ -1,59 +1,43 @@
 import { Entity, Column, PrimaryGeneratedColumn ,OneToMany} from 'typeorm';
 import {Event} from '../../events/entities/event.entity'
+import {Gym} from '../../gyms/entities/gym.entity'
+import {Coach} from '../../coachs/entities/coach.entity'
 
 
 @Entity()
 export class User {
     @PrimaryGeneratedColumn()
-    id: Number;
+    id: number;
 
     @Column()
-    first_name: string 
+    public first_name: string 
 
     @Column()
-    last_name: string
+    public last_name: string
 
     @Column()
-    mobile_phone: Number
+    public phone_number: number
 
-    @Column()
-    email: string
+    @Column({unique : true})
+    public email: string
     
     @Column()
-    likes: Number
-
-    @Column()
-    comments: string 
-
-    @Column()
-    hashed_password: string 
+    public password: string 
     
-    @Column()
-    last_login: Date 
 
-    @Column()
-    registred_at: Date 
+    @Column({type :'timestamp' ,default: ()=>'CURRENT_TIMESTAMP'})
+    public registred_at: Date 
 
-    @Column()
-    events_joined: string 
+ 
+    @OneToMany(() => Gym, (gym: Gym) => gym.members)
+    public gyms: Gym[];
 
-    @Column()
-    healthy_food_posted: string 
-    
-    @Column()
-    healthy_food_liked: string
-
-    @Column()
-    public healthy_food: string 
-
-    @Column()
-    public gyms: string 
 
     @OneToMany(() => Event, (event: Event) => event.creator)
     public events: Event[];
 
-    @Column()
-    public event_joined_id: number
+    @OneToMany(() => Coach, (coach: Coach) => coach.members)
+    public coachs: Coach[];
 
     @Column()
     public bmi: number
@@ -63,4 +47,12 @@ export class User {
 
     @Column()
     public height: number
+
+    @Column()
+    public age: number
+
+    @Column()
+    public imageUrl: string
+
+
 }

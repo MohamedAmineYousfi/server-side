@@ -1,5 +1,5 @@
 export class CreateBlogDto {
-    user_id: number;
+    user_name: number;
     blogTitle: string;
     imageUrl: string;
     content: string;

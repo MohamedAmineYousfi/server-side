@@ -8,4 +8,7 @@ export class UpdateRecipeDto extends PartialType(CreateRecipeDto) {
     content: string 
     likes: number
     imageUrl : string
+    Kcal : number 
+    fat : number 
+    carb : number
 }
