@@ -21,13 +21,13 @@ export class Recipe {
     @Column()
     public imageUrl: string 
 
-    @Column({default : 0,nullable:true})
+    @Column({default : 0})
     public Kcal : number 
     
-    @Column({default : 0,nullable:true})
+    @Column({default : 0})
     public fat : number 
 
-    @Column({default : 0,nullable:true})
+    @Column({default : 0})
     public carb : number
 
 }
