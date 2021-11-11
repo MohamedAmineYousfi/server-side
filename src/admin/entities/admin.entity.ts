@@ -4,7 +4,7 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Admin {
     @PrimaryGeneratedColumn()
-    id: Number;
+    id: number;
   
     @Column()
     first_Name: string;
