@@ -42,13 +42,13 @@ export class User {
     @Column({nullable:true})
     public bmi: number
 
-    @Column()
+    @Column({default:0})
     public weight: number
 
-    @Column()
+    @Column({default:0})
     public height: number
 
-    @Column()
+    @Column({default:0})
     public age: number
 
     @Column({nullable:true})
