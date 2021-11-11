@@ -2,7 +2,7 @@ import { PartialType } from '@nestjs/mapped-types';
 import { CreateRecipeDto } from './create-recipe.dto';
 
 export class UpdateRecipeDto extends PartialType(CreateRecipeDto) {
-    id: Number;
+    id: number;
     RecipeTitle: string 
     created_at: Date
     content: string 
