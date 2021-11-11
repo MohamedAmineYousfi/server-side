@@ -14,8 +14,6 @@ export class CreateUserDto {
      
      email: string
      
-     
-     likes: number
  
      
      password: string 
