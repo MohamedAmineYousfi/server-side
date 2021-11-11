@@ -11,8 +11,8 @@ export class Event {
     @Column()
     public eventName: string; 
 
-    @ManyToOne(() => User, (author: User) => author.events)
-  public author: User;
+    @ManyToOne(() => User, (creator: User) => creator.events)
+    public creator: User;
 
     @Column()
     public adress: string;
@@ -26,7 +26,7 @@ export class Event {
     @Column({type :'timestamp' ,default: ()=>'CURRENT_TIMESTAMP'})
     public created_at : Date; 
 
-    @Column()
+    @Column({default : 1})
     public max_number : number; 
     
 

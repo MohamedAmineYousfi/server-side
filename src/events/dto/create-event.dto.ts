@@ -1,6 +1,6 @@
-export class CreateEventDto {
+export  class CreateEventDto {
     eventName: string; 
-    user_id: number; 
+    creator: number; 
     adress: string;
     description: string;
     date: Date;  

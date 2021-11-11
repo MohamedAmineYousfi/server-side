@@ -3,24 +3,22 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Recipe {
     @PrimaryGeneratedColumn()
-    id: Number
+    public id: Number
 
     @Column()
-    recipeTitle: string 
+    public recipeTitle: string 
 
     @Column({type :'timestamp' ,default: ()=>'CURRENT_TIMESTAMP'})
     public created_at : Date; 
 
-
     @Column()
-    content: string 
+    public content: string 
 
     
-    @Column()
-    likes: Number
-
+    @Column({default : 0})
+    public likes: Number
  
     @Column()
-    imageUrl: string 
+    public imageUrl: string 
 
 }
