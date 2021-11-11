@@ -35,13 +35,13 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
 
 
     
-    members: Gym[] 
+    gyms: Gym[] 
  
      
-    adherent: Coach[] 
+    coachs: Coach[] 
 
    
-    creator: Event[]
+    events: Event[]
 
     
     bmi: number

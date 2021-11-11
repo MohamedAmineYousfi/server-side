@@ -27,13 +27,13 @@ export class CreateUserDto {
      registred_at: Date 
  
  
-     adherent: Coach[] 
+     coachs: Coach[] 
 
      
-     members: Gym[]
+     gyms: Gym[]
 
     
-     creator: Event[]
+     events: Event[]
  
      
      bmi: number
