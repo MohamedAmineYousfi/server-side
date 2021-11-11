@@ -4,7 +4,6 @@ import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import * as dotenv from 'dotenv';
-import { DatabaseModule } from './dataBase//database.module';
 import { UserModule } from './user/user.module';
 import { RestaurantsModule } from './restaurants/restaurants.module';
 import { BlogsModule } from './blogs/blogs.module';

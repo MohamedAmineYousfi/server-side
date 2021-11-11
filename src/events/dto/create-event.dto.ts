@@ -1,6 +1,8 @@
+import {User} from '../../user/entities/user.entity'
+
 export  class CreateEventDto {
     eventName: string; 
-    creator: number; 
+    creator: User; 
     adress: string;
     description: string;
     date: Date;  

@@ -1,5 +1,8 @@
+import {Gym} from '../../gyms/entities/gym.entity'
+import {Coach} from '../../coachs/entities/coach.entity'
+import {Event} from '../../events/entities/event.entity'
 export class CreateUserDto {
-    id: Number
+    id: number
  
      first_name: string 
  
@@ -7,19 +10,16 @@ export class CreateUserDto {
      last_name: string
  
      
-     mobile_phone: Number
+     phone_number: number
  
      
      email: string
      
      
-     likes: Number
+     likes: number
  
      
-     comments: string 
- 
-     
-     hashed_password: string 
+     password: string 
      
      
      last_login: Date 
@@ -27,26 +27,15 @@ export class CreateUserDto {
      
      registred_at: Date 
  
-     
-     events_joined: string 
  
      
-     healthy_food_posted: string 
-     
-     
-     healthy_food_liked: string
+     gyms: Gym[] 
  
      
-     healthy_food: string 
- 
-     
-     gyms: string 
- 
-     
-     event_created: string
- 
-     
-     event_joined_id: number
+     members: Coach[]
+
+    
+     creator: Event[]
  
      
      bmi: number

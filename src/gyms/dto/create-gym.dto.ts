@@ -1,3 +1,4 @@
+import {User} from '../../user/entities/user.entity'
 export class CreateGymDto {
     gymName: string;
     imgUrl: string;
@@ -5,7 +6,7 @@ export class CreateGymDto {
     description: string;
     fields: string;
     price: number;   
-    members: number;
+    members: User;
    isAvailable: boolean;
    latitude :  string;
    longitude :  string;
