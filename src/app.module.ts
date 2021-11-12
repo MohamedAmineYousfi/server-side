@@ -13,7 +13,6 @@ import { GymsModule } from './gyms/gyms.module';
 import { PostsModule } from './posts/posts.module';
 import { RecipesModule } from './recipes/recipes.module';
 import { AdminModule } from './admin/admin.module';
-import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -41,7 +40,6 @@ import { AuthModule } from './auth/auth.module';
     PostsModule,
     RecipesModule,
     AdminModule,
-    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
