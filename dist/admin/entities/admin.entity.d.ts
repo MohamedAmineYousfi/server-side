@@ -1,5 +1,5 @@
 export declare class Admin {
-    id: Number;
+    id: number;
     first_Name: string;
     last_Name: string;
     email: string;

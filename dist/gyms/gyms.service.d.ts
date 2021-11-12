@@ -1,9 +1,13 @@
 import { CreateGymDto } from './dto/create-gym.dto';
 import { UpdateGymDto } from './dto/update-gym.dto';
+import { Gym } from './entities/gym.entity';
+import { Repository } from 'typeorm';
 export declare class GymsService {
-    create(createGymDto: CreateGymDto): string;
-    findAll(): string;
-    findOne(id: number): string;
-    update(id: number, updateGymDto: UpdateGymDto): string;
-    remove(id: number): string;
+    private gymsRepository;
+    constructor(gymsRepository: Repository<Gym>);
+    create(createGymDto: CreateGymDto): Promise<CreateGymDto & Gym>;
+    findAll(): Promise<Gym[]>;
+    findOne(id: number): Promise<Gym>;
+    update(id: number, updateGymDto: UpdateGymDto): Promise<import("typeorm").UpdateResult>;
+    remove(id: number): Promise<void>;
 }
