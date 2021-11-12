@@ -17,7 +17,7 @@ export class User {
     @Column()
     public last_name: string
 
-    @Column()
+    @Column({default:0})
     public phone_number: number
 
     @Column({unique : true})
@@ -53,14 +53,14 @@ export class User {
     @Column({default:0})
     public age: number
 
-    @Column({nullable:true})
+    @Column({nullable:true,default:''})
     public imageUrl: string
 
-    @Column({nullable:true})
+    @Column({nullable:true,default:''})
     public adress: string
 
     
-  static email: string;
-  static password: string;
+    static email: string
+    static password: string
 
 }

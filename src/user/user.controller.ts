@@ -5,7 +5,7 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Response } from 'express';
-var jwt = require('jsonwebtoken');
+import  jwt  from "jsonwebtoken";
 
 @Controller('users')
 export class UsersController {
@@ -21,7 +21,6 @@ export class UsersController {
   }
 
 
-
   @Post('login')
   login(@Body() user: CreateUserDto, @Res() response:Response)  {
      console.log(user)
@@ -33,8 +32,6 @@ export class UsersController {
   .json({Token:token})
   }
   
-
-
 
 
   @Get()
