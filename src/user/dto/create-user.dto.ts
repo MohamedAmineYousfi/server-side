@@ -40,6 +40,8 @@ export class CreateUserDto {
  
      
      height: number
+
+     adress : string 
  
  }
  
