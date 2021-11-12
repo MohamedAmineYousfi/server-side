@@ -31,24 +31,24 @@ export class Recipe {
     public carb : number
 
     @Column({default : 0})
-    saturates : number 
+    public saturates : number 
 
     @Column({default : 0})
-    sugar : number 
+    public sugar : number 
 
     @Column({default : 0})
-    fibre : number 
+    public fibre : number 
 
     @Column({default : 0})
-    protein : number
+    public protein : number
     
     @Column({default : 0})
-    salt :number
+    public salt :number
 
     @Column({default : ''})
-    ingredients : string 
+    public ingredients : string 
 
     @Column({default : ''})
-    methodes : string
+    public methodes : string
 
 }
