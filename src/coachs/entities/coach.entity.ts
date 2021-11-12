@@ -9,7 +9,7 @@ export class Coach {
   @Column()
   public coachName: string;
 
-  @Column()
+  @Column({ default: 0 })
   rating: number;
 
   @Column()
@@ -18,7 +18,7 @@ export class Coach {
   @Column()
   public description: string;
 
-  @Column()
+  @Column({ default: '' })
   public adress: string;
 
   @ManyToOne(() => User, (coachs: User) => coachs.coachs)
@@ -30,6 +30,6 @@ export class Coach {
   @Column()
   public email: string;
 
-  @Column()
+  @Column({ default: '' })
   public imageUrl: string;
 }

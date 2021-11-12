@@ -1,40 +1,38 @@
-import { Entity, Column, PrimaryGeneratedColumn,ManyToOne } from 'typeorm';
-import {User} from '../../user/entities/user.entity'
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { User } from '../../user/entities/user.entity';
 
 @Entity()
 export class Gym {
-    @PrimaryGeneratedColumn()
-    id: number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    gymName: string;
+  @Column()
+  gymName: string;
 
-    @Column()
-    imgUrl: string;
+  @Column({ default: '' })
+  imgUrl: string;
 
-    @Column({nullable:true,default:0})
-    rating: number;
+  @Column({ nullable: true, default: 0 })
+  rating: number;
 
-    @Column()
-    description: string;
+  @Column({ default: '' })
+  description: string;
 
-    @Column()
-    fields: string;
+  @Column({ default: '' })
+  fields: string;
 
-    @Column()
-    price: number;
+  @Column({ default: 0 })
+  price: number;
 
-    @ManyToOne(() => User, (members: User) => members.gyms)
-    public members: User;
+  @ManyToOne(() => User, (members: User) => members.gyms)
+  public members: User;
 
-    @Column()
-    isAvailable: boolean;
- 
-    @Column()
-    latitude :  string;
+  @Column({ default: true })
+  isAvailable: boolean;
 
-    @Column()
-    longitude :  string;
+  @Column({ default: '' })
+  latitude: string;
 
-
+  @Column({ default: '' })
+  longitude: string;
 }
