@@ -1,5 +1,5 @@
 export class CreateRecipeDto {
-    RecipeTitle: string 
+    recipeTitle: string 
     created_at: Date
     content: string 
     likes: number

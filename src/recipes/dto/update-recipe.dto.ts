@@ -3,7 +3,7 @@ import { CreateRecipeDto } from './create-recipe.dto';
 
 export class UpdateRecipeDto extends PartialType(CreateRecipeDto) {
     id: number;
-    RecipeTitle: string 
+    recipeTitle: string 
     created_at: Date
     content: string 
     likes: number
