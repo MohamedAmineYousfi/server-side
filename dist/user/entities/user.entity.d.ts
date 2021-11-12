@@ -18,4 +18,6 @@ export declare class User {
     age: number;
     imageUrl: string;
     adress: string;
+    static email: string;
+    static password: string;
 }

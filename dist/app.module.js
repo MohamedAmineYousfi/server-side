@@ -20,6 +20,7 @@ const gyms_module_1 = require("./gyms/gyms.module");
 const posts_module_1 = require("./posts/posts.module");
 const recipes_module_1 = require("./recipes/recipes.module");
 const admin_module_1 = require("./admin/admin.module");
+const auth_module_1 = require("./auth/auth.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -38,7 +39,7 @@ AppModule = __decorate([
                 dropSchema: false,
                 ssl: { rejectUnauthorized: false },
                 entities: ["dist/**/*.entity{.ts,.js}"]
-            }), user_module_1.UserModule, restaurants_module_1.RestaurantsModule, blogs_module_1.BlogsModule, events_module_1.EventsModule, coachs_module_1.CoachsModule, gyms_module_1.GymsModule, posts_module_1.PostsModule, recipes_module_1.RecipesModule, admin_module_1.AdminModule],
+            }), user_module_1.UserModule, restaurants_module_1.RestaurantsModule, blogs_module_1.BlogsModule, events_module_1.EventsModule, coachs_module_1.CoachsModule, gyms_module_1.GymsModule, posts_module_1.PostsModule, recipes_module_1.RecipesModule, admin_module_1.AdminModule, auth_module_1.AuthModule],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })
