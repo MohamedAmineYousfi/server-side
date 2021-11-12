@@ -13,6 +13,7 @@ import { GymsModule } from './gyms/gyms.module';
 import { PostsModule } from './posts/posts.module';
 import { RecipesModule } from './recipes/recipes.module';
 import { AdminModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -31,7 +32,7 @@ import { AdminModule } from './admin/admin.module';
     entities: ["dist/**/*.entity{.ts,.js}"]
    
   
-  }), UserModule, RestaurantsModule, BlogsModule, EventsModule, CoachsModule, GymsModule, PostsModule, RecipesModule, AdminModule],
+  }), UserModule, RestaurantsModule, BlogsModule, EventsModule, CoachsModule, GymsModule, PostsModule, RecipesModule, AdminModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })

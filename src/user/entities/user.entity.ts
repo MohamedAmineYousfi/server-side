@@ -6,6 +6,8 @@ import {Coach} from '../../coachs/entities/coach.entity'
 
 @Entity()
 export class User {
+
+   
     @PrimaryGeneratedColumn()
     public id: number;
 
@@ -56,5 +58,9 @@ export class User {
 
     @Column({nullable:true})
     public adress: string
+
+    
+  static email: string;
+  static password: string;
 
 }

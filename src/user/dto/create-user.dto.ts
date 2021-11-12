@@ -2,7 +2,14 @@ import {Gym} from '../../gyms/entities/gym.entity'
 import {Coach} from '../../coachs/entities/coach.entity'
 import {Event} from '../../events/entities/event.entity'
 export class CreateUserDto {
-  
+      
+
+     id:number
+
+     imageUrl: string
+
+     age: number
+
      first_name: string 
  
      
