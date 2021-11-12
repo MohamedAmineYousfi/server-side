@@ -28,6 +28,9 @@ export class Event {
 
     @Column({default : 1})
     public max_number : number; 
+
+    @Column({default : ''})
+    public imageUrl : string; 
     
 
 }
