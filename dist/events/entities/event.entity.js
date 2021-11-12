@@ -46,6 +46,10 @@ __decorate([
     (0, typeorm_1.Column)({ default: 1 }),
     __metadata("design:type", Number)
 ], Event.prototype, "max_number", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ default: '' }),
+    __metadata("design:type", String)
+], Event.prototype, "imageUrl", void 0);
 Event = __decorate([
     (0, typeorm_1.Entity)()
 ], Event);

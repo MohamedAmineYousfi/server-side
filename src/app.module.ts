@@ -16,23 +16,33 @@ import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot({
-    name:'default',
-    type:'postgres',
-    url: process.env.DATABASE_URL ,
-    username: process.env.POSTGRES_USERNAME ,
-    password: process.env.POSTGRES_PASSWORD ,
-    host: process.env.POSTGRES_HOST ,
-    port: 5432,
-    database: process.env.POSTGRES_DATABASE ,
-    synchronize: true,
-    logging:true,
-    dropSchema:false,
-    ssl: { rejectUnauthorized: false },
-    entities: ["dist/**/*.entity{.ts,.js}"]
-   
-  
-  }), UserModule, RestaurantsModule, BlogsModule, EventsModule, CoachsModule, GymsModule, PostsModule, RecipesModule, AdminModule, AuthModule],
+  imports: [
+    TypeOrmModule.forRoot({
+      name: 'default',
+      type: 'postgres',
+      url: process.env.DATABASE_URL,
+      username: process.env.POSTGRES_USERNAME,
+      password: process.env.POSTGRES_PASSWORD,
+      host: process.env.POSTGRES_HOST,
+      port: 5432,
+      database: process.env.POSTGRES_DATABASE,
+      synchronize: true,
+      logging: true,
+      dropSchema: false,
+      ssl: { rejectUnauthorized: false },
+      entities: ['dist/**/*.entity{.ts,.js}'],
+    }),
+    UserModule,
+    RestaurantsModule,
+    BlogsModule,
+    EventsModule,
+    CoachsModule,
+    GymsModule,
+    PostsModule,
+    RecipesModule,
+    AdminModule,
+    AuthModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

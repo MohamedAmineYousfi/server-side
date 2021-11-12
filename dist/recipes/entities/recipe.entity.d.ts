@@ -5,7 +5,7 @@ export declare class Recipe {
     content: string;
     likes: number;
     imageUrl: string;
-    Kcal: number;
+    kcal: number;
     fat: number;
     carb: number;
     saturates: number;

@@ -7,11 +7,9 @@ export declare class UpdateUserDto extends UpdateUserDto_base {
     id: number;
     first_name: string;
     last_name: string;
-    mobile_phone: number;
+    phone_number: number;
     email: string;
-    likes: number;
-    hashed_password: string;
-    last_login: Date;
+    password: string;
     registred_at: Date;
     gyms: Gym[];
     coachs: Coach[];
@@ -20,5 +18,6 @@ export declare class UpdateUserDto extends UpdateUserDto_base {
     weight: number;
     height: number;
     adress: string;
+    imageUrl: string;
 }
 export {};

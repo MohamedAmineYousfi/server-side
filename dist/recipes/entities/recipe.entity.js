@@ -40,7 +40,7 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)({ default: 0 }),
     __metadata("design:type", Number)
-], Recipe.prototype, "Kcal", void 0);
+], Recipe.prototype, "kcal", void 0);
 __decorate([
     (0, typeorm_1.Column)({ default: 0 }),
     __metadata("design:type", Number)

@@ -29,7 +29,7 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "last_name", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: 0 }),
     __metadata("design:type", Number)
 ], User.prototype, "phone_number", void 0);
 __decorate([
@@ -73,11 +73,11 @@ __decorate([
     __metadata("design:type", Number)
 ], User.prototype, "age", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ nullable: true }),
+    (0, typeorm_1.Column)({ nullable: true, default: '' }),
     __metadata("design:type", String)
 ], User.prototype, "imageUrl", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ nullable: true }),
+    (0, typeorm_1.Column)({ nullable: true, default: '' }),
     __metadata("design:type", String)
 ], User.prototype, "adress", void 0);
 User = __decorate([

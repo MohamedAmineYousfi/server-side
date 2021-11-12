@@ -2,12 +2,12 @@ import { CreateRecipeDto } from './create-recipe.dto';
 declare const UpdateRecipeDto_base: import("@nestjs/mapped-types").MappedType<Partial<CreateRecipeDto>>;
 export declare class UpdateRecipeDto extends UpdateRecipeDto_base {
     id: number;
-    RecipeTitle: string;
+    recipeTitle: string;
     created_at: Date;
     content: string;
     likes: number;
     imageUrl: string;
-    Kcal: number;
+    kcal: number;
     fat: number;
     carb: number;
     saturates: number;

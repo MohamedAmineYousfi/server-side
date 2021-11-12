@@ -1,10 +1,10 @@
 export declare class CreateRecipeDto {
-    RecipeTitle: string;
+    recipeTitle: string;
     created_at: Date;
     content: string;
     likes: number;
     imageUrl: string;
-    Kcal: number;
+    kcal: number;
     fat: number;
     carb: number;
     saturates: number;

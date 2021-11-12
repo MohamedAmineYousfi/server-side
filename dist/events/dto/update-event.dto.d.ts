@@ -10,5 +10,6 @@ export declare class UpdateEventDto extends UpdateEventDto_base {
     date: Date;
     created_at: Date;
     max_number: number;
+    imageUrl: string;
 }
 export {};

@@ -8,4 +8,5 @@ export declare class Event {
     date: Date;
     created_at: Date;
     max_number: number;
+    imageUrl: string;
 }
