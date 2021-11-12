@@ -7,12 +7,12 @@ import {Observable, from , of} from 'rxjs'
 @Injectable()
 export class AuthService {
  constructor(private readonly jwtService: JwtService){}
- generateJWT(user: CreateUserDto): Observable <string> {
+ generateJWT(user: CreateUserDto)  {
    return from(this.jwtService.signAsync({user}))
  }
 
 
- 
+
 
 hashPassword(password:string):  Observable <string> {
 return from<string>( bcrypt.hash(password, 12))
