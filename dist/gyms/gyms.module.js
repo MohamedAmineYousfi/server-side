@@ -10,12 +10,15 @@ exports.GymsModule = void 0;
 const common_1 = require("@nestjs/common");
 const gyms_service_1 = require("./gyms.service");
 const gyms_controller_1 = require("./gyms.controller");
+const gym_entity_1 = require("./entities/gym.entity");
+const typeorm_1 = require("@nestjs/typeorm");
 let GymsModule = class GymsModule {
 };
 GymsModule = __decorate([
     (0, common_1.Module)({
         controllers: [gyms_controller_1.GymsController],
-        providers: [gyms_service_1.GymsService]
+        providers: [gyms_service_1.GymsService],
+        imports: [typeorm_1.TypeOrmModule.forFeature([gym_entity_1.Gym])]
     })
 ], GymsModule);
 exports.GymsModule = GymsModule;
