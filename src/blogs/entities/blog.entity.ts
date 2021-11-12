@@ -14,7 +14,7 @@ export class Blog {
   @Column({ type: 'varchar', length: 300 })
   public content: string;
 
-  @Column()
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   public date: Date;
 
   @Column({ default: 0, nullable: true })
