@@ -22,7 +22,7 @@ export class Recipe {
     public imageUrl: string 
 
     @Column({default : 0})
-    public Kcal : number 
+    public kcal : number 
     
     @Column({default : 0})
     public fat : number 
