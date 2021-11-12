@@ -30,4 +30,25 @@ export class Recipe {
     @Column({default : 0})
     public carb : number
 
+    @Column({default : 0})
+    saturates : number 
+
+    @Column({default : 0})
+    sugar : number 
+
+    @Column({default : 0})
+    fibre : number 
+
+    @Column({default : 0})
+    protein : number
+    
+    @Column({default : 0})
+    salt :number
+
+    @Column({default : ''})
+    ingredients : string 
+
+    @Column({default : ''})
+    methodes : string
+
 }

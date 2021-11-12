@@ -54,5 +54,7 @@ export class User {
     @Column({nullable:true})
     public imageUrl: string
 
+    @Column({nullable:true})
+    public adress: string
 
 }

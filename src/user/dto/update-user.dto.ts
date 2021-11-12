@@ -52,7 +52,7 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
     
     height: number
 
-
+    adress : string 
 
 }
 

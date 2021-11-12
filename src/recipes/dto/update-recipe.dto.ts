@@ -11,4 +11,11 @@ export class UpdateRecipeDto extends PartialType(CreateRecipeDto) {
     Kcal : number 
     fat : number 
     carb : number
+    saturates : number 
+    sugar : number 
+    fibre : number 
+    protein : number 
+    salt :number
+    ingredients : string 
+    methodes : string
 }
