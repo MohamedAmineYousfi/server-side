@@ -1,3 +1,6 @@
+#compiledoutput 
+/dist
+/node_modules
 # Logs
 logs
 *.log
@@ -6,6 +9,8 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+.DS_Store
+/*.env
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -69,8 +74,8 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
-.env.test
+/env
+
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -80,7 +85,8 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+.dist
+
 
 # Gatsby files
 .cache/
