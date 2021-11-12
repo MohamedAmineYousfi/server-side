@@ -7,11 +7,14 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { Response } from 'express';
 var jwt = require('jsonwebtoken');
 
+
+
 @Controller('users')
+
+
 export class UsersController {
+
   constructor(private readonly usersService: UsersService) {}
-
-
 
 
 
@@ -26,7 +29,7 @@ export class UsersController {
   login(@Body() user: CreateUserDto, @Res() response:Response)  {
      console.log(user)
       var token = jwt.sign(
-      {userid:user.id,username:user.email},
+      {id:user.id,email:user.email},
       process.env.JWT_SECRET
     )
   response.status(HttpStatus.CREATED)
@@ -35,16 +38,14 @@ export class UsersController {
   
 
 
-
-
   @Get()
   findAll() {
     return this.usersService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.usersService.findOne(+id);
+  findOne(@Param() params) {
+    return this.usersService.findOne(params.id);
   }
 
   @Patch(':id')
