@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { CreateUserDto} from '../../user/dto/create-user.dto';
 import {Observable, from , of} from 'rxjs'
+
   const bcrypt = require('bcrypt')
 //  import bcrypt from "bcrypt"
 @Injectable()
@@ -14,7 +15,7 @@ export class AuthService {
 
 
   hashPassword(password:string):  Observable <string> {
-return from<string>( bcrypt.hash(password, 12))
+return from<string>( bcrypt.hash(password, 10))
  }
 
 

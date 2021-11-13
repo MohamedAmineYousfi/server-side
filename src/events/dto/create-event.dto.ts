@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {User} from '../../user/entities/user.entity'
 
 export  class CreateEventDto {
@@ -8,4 +9,5 @@ export  class CreateEventDto {
     date: Date;  
     created_at : Date; 
     max_number: number;
+    imageUrl : string
 }

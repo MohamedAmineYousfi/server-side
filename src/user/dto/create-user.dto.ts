@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {Gym} from '../../gyms/entities/gym.entity'
 import {Coach} from '../../coachs/entities/coach.entity'
 import {Event} from '../../events/entities/event.entity'
@@ -25,9 +26,6 @@ export class CreateUserDto {
      password: string 
      
      
-     last_login: Date 
- 
-     
      registred_at: Date 
  
  
@@ -48,7 +46,9 @@ export class CreateUserDto {
      
      height: number
 
+
      adress : string 
+
  
  }
  

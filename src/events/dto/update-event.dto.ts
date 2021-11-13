@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { PartialType } from '@nestjs/mapped-types';
 import { CreateEventDto } from './create-event.dto';
 import {User} from '../../user/entities/user.entity'
@@ -10,4 +11,5 @@ export  class UpdateEventDto extends PartialType(CreateEventDto) {
     date: Date;  
     created_at : Date; 
     max_number: number;
+    imageUrl : string
 }

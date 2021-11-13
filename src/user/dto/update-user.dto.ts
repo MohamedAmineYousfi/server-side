@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { PartialType } from '@nestjs/mapped-types';
 import { CreateUserDto } from './create-user.dto';
 import {Gym} from '../../gyms/entities/gym.entity'
@@ -21,26 +22,18 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
     last_name: string
 
     
-    mobile_phone: number
+    phone_number: number
 
     
     email: string
-    
-    
-    likes: number
 
-    
 
-    hashed_password: string 
-    
-    
-    last_login: Date 
-
-    
+    password: string 
+     
+ 
     registred_at: Date 
 
 
-    
     gyms: Gym[] 
  
      
@@ -58,7 +51,10 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
     
     height: number
 
+
     adress : string 
+
+    imageUrl : string 
 
 }
 
