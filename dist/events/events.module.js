@@ -10,12 +10,15 @@ exports.EventsModule = void 0;
 const common_1 = require("@nestjs/common");
 const events_service_1 = require("./events.service");
 const events_controller_1 = require("./events.controller");
+const event_entity_1 = require("./entities/event.entity");
+const typeorm_1 = require("@nestjs/typeorm");
 let EventsModule = class EventsModule {
 };
 EventsModule = __decorate([
     (0, common_1.Module)({
         controllers: [events_controller_1.EventsController],
-        providers: [events_service_1.EventsService]
+        providers: [events_service_1.EventsService],
+        imports: [typeorm_1.TypeOrmModule.forFeature([event_entity_1.Event])]
     })
 ], EventsModule);
 exports.EventsModule = EventsModule;

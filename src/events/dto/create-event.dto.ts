@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {User} from '../../user/entities/user.entity'
 
 export  class CreateEventDto {

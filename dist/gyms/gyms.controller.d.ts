@@ -4,9 +4,9 @@ import { UpdateGymDto } from './dto/update-gym.dto';
 export declare class GymsController {
     private readonly gymsService;
     constructor(gymsService: GymsService);
-    create(createGymDto: CreateGymDto): string;
-    findAll(): string;
-    findOne(id: string): string;
-    update(id: string, updateGymDto: UpdateGymDto): string;
-    remove(id: string): string;
+    create(createGymDto: CreateGymDto): Promise<CreateGymDto & import("./entities/gym.entity").Gym>;
+    findAll(): Promise<import("./entities/gym.entity").Gym[]>;
+    findOne(id: string): Promise<import("./entities/gym.entity").Gym>;
+    update(id: string, updateGymDto: UpdateGymDto): Promise<import("typeorm").UpdateResult>;
+    remove(id: string): Promise<void>;
 }

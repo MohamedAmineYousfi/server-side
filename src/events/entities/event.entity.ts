@@ -1,4 +1,5 @@
-import { Column, Entity, JoinColumn,ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+/* eslint-disable prettier/prettier */
+import { Column, Entity,ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import {User} from '../../user/entities/user.entity'
 
 @Entity()

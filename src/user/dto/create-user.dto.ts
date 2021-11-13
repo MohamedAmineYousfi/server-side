@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {Gym} from '../../gyms/entities/gym.entity'
 import {Coach} from '../../coachs/entities/coach.entity'
 import {Event} from '../../events/entities/event.entity'

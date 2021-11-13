@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Entity, Column, PrimaryGeneratedColumn ,OneToMany} from 'typeorm';
 import {Event} from '../../events/entities/event.entity'
 import {Gym} from '../../gyms/entities/gym.entity'
