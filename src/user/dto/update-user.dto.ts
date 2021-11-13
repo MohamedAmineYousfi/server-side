@@ -16,26 +16,18 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
     last_name: string
 
     
-    mobile_phone: number
+    phone_number: number
 
     
     email: string
-    
-    
-    likes: number
 
-    
 
-    hashed_password: string 
-    
-    
-    last_login: Date 
-
-    
+    password: string 
+     
+ 
     registred_at: Date 
 
 
-    
     gyms: Gym[] 
  
      
@@ -53,7 +45,10 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
     
     height: number
 
+
     adress : string 
+
+    imageUrl : string 
 
 }
 

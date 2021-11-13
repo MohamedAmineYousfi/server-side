@@ -9,4 +9,5 @@ export  class CreateEventDto {
     date: Date;  
     created_at : Date; 
     max_number: number;
+    imageUrl : string
 }

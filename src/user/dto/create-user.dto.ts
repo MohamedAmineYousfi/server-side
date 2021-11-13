@@ -3,7 +3,14 @@ import {Gym} from '../../gyms/entities/gym.entity'
 import {Coach} from '../../coachs/entities/coach.entity'
 import {Event} from '../../events/entities/event.entity'
 export class CreateUserDto {
-  
+      
+
+     id:number
+
+     imageUrl: string
+
+     age: number
+
      first_name: string 
  
      
@@ -18,9 +25,6 @@ export class CreateUserDto {
  
      password: string 
      
-     
-     last_login: Date 
- 
      
      registred_at: Date 
  
@@ -42,7 +46,9 @@ export class CreateUserDto {
      
      height: number
 
+
      adress : string 
+
  
  }
  
