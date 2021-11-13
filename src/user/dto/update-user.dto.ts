@@ -9,6 +9,12 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
  
     id: number
 
+
+    imageUrl: string
+
+
+    age: number
+    
     
     first_name: string 
 

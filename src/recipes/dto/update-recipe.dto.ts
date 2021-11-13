@@ -19,3 +19,4 @@ export class UpdateRecipeDto extends PartialType(CreateRecipeDto) {
   ingredients: string;
   methodes: string;
 }
+
