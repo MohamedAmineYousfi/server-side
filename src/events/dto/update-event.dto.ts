@@ -10,4 +10,5 @@ export  class UpdateEventDto extends PartialType(CreateEventDto) {
     date: Date;  
     created_at : Date; 
     max_number: number;
+    imageUrl : string
 }

@@ -1,37 +1,35 @@
-import { Entity, Column, PrimaryGeneratedColumn ,ManyToOne} from 'typeorm';
-import {User} from '../../user/entities/user.entity'
-
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { User } from '../../user/entities/user.entity';
 
 @Entity()
 export class Coach {
+  @PrimaryGeneratedColumn()
+  public id: number;
 
-    @PrimaryGeneratedColumn()
-    id: Number;
+  @Column()
+  public coachName: string;
 
-    @Column()
-    coachName: string; 
+  @Column({ default: 0 })
+  rating: number;
 
-    @Column()
-    rating: Number; 
+  @Column()
+  public price: number;
 
-    @Column()
-    price: Number;
+  @Column()
+  public description: string;
 
-    @Column()
-    description: string;
-  
-    @Column()
-    adress: string; 
+  @Column({ default: '' })
+  public adress: string;
 
-    @ManyToOne(() => User, (adherent: User) => adherent.coachs)
-    public adherent: User;
-  
-    @Column()
-    phoneNumber : Number; 
+  @ManyToOne(() => User, (coachs: User) => coachs.coachs)
+  public coachs: User;
 
-    @Column()
-    email : string; 
+  @Column()
+  public phoneNumber: number;
 
-    @Column()
-    imageUrl : string;
+  @Column()
+  public email: string;
+
+  @Column({ default: '' })
+  public imageUrl: string;
 }

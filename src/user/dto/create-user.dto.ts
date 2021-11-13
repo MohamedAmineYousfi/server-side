@@ -25,9 +25,6 @@ export class CreateUserDto {
      password: string 
      
      
-     last_login: Date 
- 
-     
      registred_at: Date 
  
  
@@ -48,7 +45,9 @@ export class CreateUserDto {
      
      height: number
 
+
      adress : string 
+
  
  }
  

@@ -1,41 +1,24 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete,Res ,HttpStatus } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { UsersService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
-import { Response } from 'express';
-var jwt = require('jsonwebtoken');
 
 @Controller('users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
-
-
-
-
   @Post()
-  create(@Body()user: CreateUserDto):Observable<any>  {
-    return this.usersService.create(user);
+  create(@Body() createUserDto: CreateUserDto) {
+    return this.usersService.create(createUserDto);
   }
-
-
-
-  @Post('login')
-  login(@Body() user: CreateUserDto, @Res() response:Response)  {
-     console.log(user)
-      var token = jwt.sign(
-      {userid:user.id,username:user.email},
-      process.env.JWT_SECRET
-    )
-  response.status(HttpStatus.CREATED)
-  .json({Token:token})
-  }
-  
-
-
-
 
   @Get()
   findAll() {
