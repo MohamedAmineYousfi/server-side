@@ -13,19 +13,24 @@ import {
 import { UsersService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import jwt from 'jsonwebtoken';
-import { Response } from 'express';
+import { Response,response } from 'express';
+const jwt = require("jsonwebtoken");
 @Controller('users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   @Post()
   create(@Body() createUserDto: CreateUserDto , @Res() response:Response) {
-    this.usersService.create(createUserDto).then((res)=>{
-      console.log(res)
-      response.status(HttpStatus.CREATED)
-      .json({response:'user saved '})
-    })
+  return  this.usersService.create(createUserDto).then((res)=>{
+
+    const token = jwt.sign(
+        {user_id:res.id},
+        process.env.TOKEN_KEY
+
+    )
+        response.status(HttpStatus.CREATED)
+        .json({Token:token})
+      })
   }
 
   @Get()
