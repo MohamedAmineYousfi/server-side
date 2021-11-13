@@ -14,14 +14,17 @@ var jwt = require('jsonwebtoken');
 
 export class UsersController {
 
-  constructor(private readonly usersService: UsersService) {}
+  constructor(private  usersService: UsersService) {}
 
+
+  
 
 
   @Post()
   create(@Body()user: CreateUserDto):Observable<any>  {
     return this.usersService.create(user);
   }
+
 
 
 
@@ -38,10 +41,13 @@ export class UsersController {
   
 
 
+  
+
   @Get()
   findAll() {
     return this.usersService.findAll();
   }
+
 
   @Get(':id')
   findOne(@Param() params) {
