@@ -35,4 +35,7 @@ export class Gym {
 
   @Column({ default: '' })
   longitude: string;
+
+  @Column({ default: '' })
+  adress: string;
 }
