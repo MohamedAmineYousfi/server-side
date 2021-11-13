@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 export class CreateRecipeDto {
   recipeTitle: string;
   created_at: Date;
