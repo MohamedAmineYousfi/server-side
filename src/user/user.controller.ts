@@ -6,7 +6,11 @@ import {
   Patch,
   Param,
   Delete,
+  Res,
+  HttpStatus,
 } from '@nestjs/common';
+import { Response, response } from 'express';
+import jwt from 'jsonwebtoken';
 import { UsersService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -16,8 +20,11 @@ export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   @Post()
-  create(@Body() createUserDto: CreateUserDto) {
-    return this.usersService.create(createUserDto);
+  create(@Body() createUserDto: CreateUserDto, @Res() response: Response) {
+    return this.usersService.create(createUserDto).then((res) => {
+      const token = jwt.sign({ user_id: res.id }, process.env.TOKEN_KEY);
+      response.status(HttpStatus.CREATED).json({ Token: token });
+    });
   }
 
   @Get()
