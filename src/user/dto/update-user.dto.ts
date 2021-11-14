@@ -1,40 +1,53 @@
-/* eslint-disable prettier/prettier */
 import { PartialType } from '@nestjs/mapped-types';
 import { CreateUserDto } from './create-user.dto';
-import { Gym } from '../../gyms/entities/gym.entity';
-import { Event } from '../../events/entities/event.entity';
-import { Coach } from '../../coachs/entities/coach.entity';
+import {Gym} from '../../gyms/entities/gym.entity'
+import {Event} from '../../events/entities/event.entity'
+import {Coach} from '../../coachs/entities/coach.entity'
 
 export class UpdateUserDto extends PartialType(CreateUserDto) {
-  id: number;
+ 
+    id: number
 
-  imageUrl: string;
+    
+    first_name: string 
 
-  age: number;
+    
+    last_name: string
 
-  first_name: string;
+    
+    phone_number: number
 
-  last_name: string;
+    
+    email: string
 
-  phone_number: number;
 
-  email: string;
+    password: string 
+     
+ 
+    registred_at: Date 
 
-  password: string;
 
-  registred_at: Date;
+    gyms: Gym[] 
+ 
+     
+    coachs: Coach[] 
 
-  gyms: Gym[];
+   
+    events: Event[]
 
-  coachs: Coach[];
+    
+    bmi: number
 
-  events: Event[];
+    
+    weight: number
 
-  bmi: number;
+    
+    height: number
 
-  weight: number;
 
-  height: number;
+    adress : string 
 
-  adress: string;
+    imageUrl : string 
+
 }
+
