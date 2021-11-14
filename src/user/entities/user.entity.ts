@@ -52,7 +52,4 @@ export class User {
 
   @Column({ nullable: true, default: '' })
   public adress: string;
-
-  static email: string;
-  static password: string;
 }
