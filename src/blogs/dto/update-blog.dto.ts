@@ -8,4 +8,5 @@ export class UpdateBlogDto extends PartialType(CreateBlogDto) {
   content: string;
   date: Date;
   like: number;
+  author : string 
 }

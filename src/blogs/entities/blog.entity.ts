@@ -19,4 +19,7 @@ export class Blog {
 
   @Column({ default: 0, nullable: true })
   public like: number;
+
+  @Column({ nullable: true })
+  public author: string;
 }

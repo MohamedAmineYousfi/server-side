@@ -4,4 +4,5 @@ export class CreateBlogDto {
   content: string;
   date: Date;
   like: number;
+  author : string 
 }
