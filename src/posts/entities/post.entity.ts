@@ -6,18 +6,18 @@ export class Post {
   @PrimaryGeneratedColumn()
   id: Number;
 
-  @Column()
-  postTitle: string;
-
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
-  created_at: Date;
+  public created_at: Date;
 
   @Column()
-  content: string;
+  public content: string;
+
+  @Column()
+  public user: string;
 
   @ManyToOne(() => User, (author: User) => author.posts)
   public author: User;
 
   @Column({ default: 0 })
-  likes: Number;
+  public likes: Number;
 }

@@ -1,7 +1,8 @@
 export class CreatePostDto {
   postTitle: string;
+  user: string;
   created_at: Date;
   content: string;
-  user_id: number;
+  author: number;
   likes: number;
 }

@@ -3,9 +3,9 @@ import { CreatePostDto } from './create-post.dto';
 
 export class UpdatePostDto extends PartialType(CreatePostDto) {
   id: number;
-  postTitle: string;
+  user: string;
   created_at: Date;
   content: string;
-  user_id: number;
+  author: number;
   likes: number;
 }
