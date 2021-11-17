@@ -9,7 +9,7 @@ export class Post {
   @Column()
   postTitle: string;
 
-  @Column()
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   created_at: Date;
 
   @Column()
@@ -18,6 +18,6 @@ export class Post {
   @ManyToOne(() => User, (author: User) => author.posts)
   public author: User;
 
-  @Column()
+  @Column({ default: 0 })
   likes: Number;
 }
