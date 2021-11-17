@@ -2,7 +2,7 @@ import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { Event } from '../../events/entities/event.entity';
 import { Gym } from '../../gyms/entities/gym.entity';
 import { Coach } from '../../coachs/entities/coach.entity';
-
+import { Post } from '../../posts/entities/post.entity';
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
@@ -34,6 +34,9 @@ export class User {
 
   @OneToMany(() => Coach, (coach: Coach) => coach.coachs)
   public coachs: Coach[];
+
+  @OneToMany(() => Post, (post: Post) => post.author)
+  public posts: Post[];
 
   @Column({ nullable: true })
   public bmi: number;
