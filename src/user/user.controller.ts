@@ -9,8 +9,9 @@ import {
   Res,
   HttpStatus,
 } from '@nestjs/common';
+require('dotenv').config();
 import { Response, response } from 'express';
-import jwt from 'jsonwebtoken';
+const jwt = require('jsonwebtoken');
 import { UsersService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
